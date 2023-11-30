@@ -44,3 +44,11 @@ footer{
 .clicked {
     background-color: rgb(0, 157, 255);
 }
+
+.boom-back{
+    background-color: red;
+}
+
+.safe-back{
+    background-color: blue;
+}

@@ -10,26 +10,33 @@ const numbers = generationArray(1, 100, 16);
 
 console.log(numbers);
 
+let score = 0;
+
 for (let i = 1; i <= 100; i++) {
 
     const newEl = createAnElement("div", "square");
 
-    /* newEl.append(numbers[i]); */
+    let numeroCella = i;
+
+    newEl.append(numeroCella);
 
     newEl.addEventListener("click",
 
         function () {
 
-            this.classList.add("clicked");
             console.log(i);
+            if (numbers.includes(numeroCella)) {
+                this.classList.add("boom-back");
+                console.log("BOOM!! Hai perso!!");
+                console.log("hai totalizzato questi punti: " + score);
+            } else {
+                this.classList.add("safe-back");
+                score++;
+            }
 
         }
 
     )
-
-
-
-    newEl.append(i);
 
     gridCampo.append(newEl);
 
